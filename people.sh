@@ -22,7 +22,7 @@ rm .tmp.info
 #setup timezone varable for mandatory use in people.json
 
 tzhold=${tzinfo[1]}
-if $tz is null warn user and ask again (currently dose not repopulate boxes, working on that).
+#if ${tzinfo[1]} is null warn user and ask again (currently dose not repopulate boxes, working on that).
 while [ $tzhold == ${tzinfo[1]} ] 
 do
 	zenity
