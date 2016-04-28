@@ -25,7 +25,7 @@ tzhold=${tzinfo[1]}
 #if ${tzinfo[1]} is null warn user and ask again (currently dose not repopulate boxes, working on that).
 while [ $tzhold == ${tzinfo[1]} ] 
 do
-	zenity
+	zenity --error --text "A timezone must be selected."
         zenity --forms --title="Add Friend" --text="Enter information about your friend." --add-entry="Name" --add-combo="Timezone" --add-entry="Avatar" --add-entry="Gravatar" --add-entry="Github" --add-entry="City" --combo-values="$zoneinfo" > .tmp.info
 	if [ $? -eq 1 ]
 	then
