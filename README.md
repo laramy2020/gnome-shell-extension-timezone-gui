@@ -1,6 +1,6 @@
 # gnome-shell-extension-timezone-gui
 Timezone-gui is a bash/zenity based gui for creating the person.json file for [Timezone gnome extension](https://github.com/jwendell/gnome-shell-extension-timezone)
-
+![Screenshot](https://laramyblack.com/timezone.png)
 
 
 # Requirements
