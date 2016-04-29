@@ -7,7 +7,16 @@ cp ~/people.json ~/people.json.`date +"%m-%d-%y-_-%T"` 2>&1
 IFS=$'|'
 
 #Prompt user for info and output to a temp file (looking to add this into one command).
-zenity --forms --title="Add Friend" --text="Enter information about your friend." --add-entry="Name" --add-combo="Timezone" --add-entry="Avatar" --add-entry="Gravatar" --add-entry="Github" --add-entry="City" --combo-values="$zoneinfo" > .tmp.info
+zenity --forms \
+--title="Add Friend" \
+--text="Enter information about your friend." \
+--add-entry="Name" \
+--add-combo="Timezone" \
+--add-entry="Avatar" \
+--add-entry="Gravatar" \
+--add-entry="Github" \
+--add-entry="City" \
+--combo-values="$zoneinfo" > .tmp.info
 if [ $? -eq 1 ]
 then
 	exit 1
@@ -26,7 +35,16 @@ tzhold=${tzinfo[1]}
 while [ $tzhold == ${tzinfo[1]} ] 
 do
 	zenity --error --text "A timezone must be selected."
-        zenity --forms --title="Add Friend" --text="Enter information about your friend." --add-entry="Name" --add-combo="Timezone" --add-entry="Avatar" --add-entry="Gravatar" --add-entry="Github" --add-entry="City" --combo-values="$zoneinfo" > .tmp.info
+        zenity --forms \
+	--title="Add Friend" \
+	--text="Enter information about your friend." \
+	--add-entry="Name" \
+	--add-combo="Timezone" \
+	--add-entry="Avatar" \
+	--add-entry="Gravatar" \
+	--add-entry="Github" \
+	--add-entry="City" \
+	--combo-values="$zoneinfo" > .tmp.info
 	if [ $? -eq 1 ]
 	then
 		exit 1
